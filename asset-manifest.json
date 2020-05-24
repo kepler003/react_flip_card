@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/react_flip_card/static/css/main.e8b6b874.chunk.css",
+    "main.js": "/react_flip_card/static/js/main.8dd476ba.chunk.js",
+    "main.js.map": "/react_flip_card/static/js/main.8dd476ba.chunk.js.map",
+    "runtime-main.js": "/react_flip_card/static/js/runtime-main.5056b2ee.js",
+    "runtime-main.js.map": "/react_flip_card/static/js/runtime-main.5056b2ee.js.map",
+    "static/js/2.9656a956.chunk.js": "/react_flip_card/static/js/2.9656a956.chunk.js",
+    "static/js/2.9656a956.chunk.js.map": "/react_flip_card/static/js/2.9656a956.chunk.js.map",
+    "index.html": "/react_flip_card/index.html",
+    "precache-manifest.bf20ee30f8d615b55bc949bc233d59c5.js": "/react_flip_card/precache-manifest.bf20ee30f8d615b55bc949bc233d59c5.js",
+    "service-worker.js": "/react_flip_card/service-worker.js",
+    "static/css/main.e8b6b874.chunk.css.map": "/react_flip_card/static/css/main.e8b6b874.chunk.css.map",
+    "static/js/2.9656a956.chunk.js.LICENSE.txt": "/react_flip_card/static/js/2.9656a956.chunk.js.LICENSE.txt",
+    "static/media/dance.jpg": "/react_flip_card/static/media/dance.3983ac19.jpg",
+    "static/media/travel.jpg": "/react_flip_card/static/media/travel.7bd3de86.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5056b2ee.js",
+    "static/js/2.9656a956.chunk.js",
+    "static/css/main.e8b6b874.chunk.css",
+    "static/js/main.8dd476ba.chunk.js"
+  ]
+}
