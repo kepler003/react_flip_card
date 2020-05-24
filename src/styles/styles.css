@@ -8,6 +8,7 @@
   height: 100vh;
   background-color: hsl(220, 50%, 60%);
   background: linear-gradient(to bottom right, hsl(290, 50%, 65%), hsl(220, 50%, 50%));
+  overflow: hidden;
 }
 
 .card {
@@ -17,6 +18,7 @@
   align-items: center;
   width: 600px;
   height: 350px;
+  max-width: 90%;
   background-color: #fff;
   border-radius: 20px;
   overflow: hidden;

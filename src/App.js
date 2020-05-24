@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useSpring, animated } from 'react-spring';
+import { useSpring, animated, config } from 'react-spring';
 import './styles/styles.css';
 import dance from './images/dance.jpg';
 import travel from './images/travel.jpg';
@@ -10,7 +10,7 @@ function App() {
 
   // Init state (card not flipped; flip angle == 0)
   const [flipped, setFlipped] = useState(false);
-  const [props, setProps] = useSpring(() => ({ angle: flipped ? 180 : 0 }))
+  const [props, setProps] = useSpring(() => ({ angle: 0, config: {...config.default, mass: 2, tension: 100} }))
 
 
 
@@ -25,7 +25,20 @@ function App() {
 
 
   // Card & images styling
-  const cardStyle =   { transform: props.angle.interpolate(angle => `perspective(1200px) rotateX(${angle}deg)`) }
+  const cardStyle =   {
+    boxShadow: props.angle.interpolate(angle => {
+      const offsetY = 7 - (14 * angle / 180);
+      const spread = ((-1 / 60) * Math.pow(angle, 2)) + (3 * angle) + 20;
+      const alpha = angle < 90 ? (1 - (0.9 * (angle / 90))) : (0.1 + (0.9 * ((angle - 90) / 90)));
+
+      return `0 ${ offsetY }px ${ spread }px 2px hsla(0, 0%, 25%, ${ alpha })`
+    }),
+    transform: props.angle.interpolate(angle => {
+      const scale = angle < 90 ? (1 + (0.3 * (angle / 90))) : (1.3 - (0.3 * ((angle - 90) / 90)));
+
+      return `perspective(1200px) rotateX(${angle}deg) scale(${scale})`
+    })
+  }
   const travelStyle = { opacity:   props.angle.interpolate({range: [0, 180], output: [1, 0]}) }
   const danceStyle =  { opacity:   props.angle.interpolate({range: [0, 180], output: [0, 1]}) }
 
