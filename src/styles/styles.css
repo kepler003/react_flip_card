@@ -1,0 +1,36 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(220, 50%, 60%);
+  background: linear-gradient(to bottom right, hsl(290, 50%, 65%), hsl(220, 50%, 50%));
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 600px;
+  height: 350px;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+.image {
+  position: absolute;
+}
+
+.dance {
+  transform: rotateX(180deg);
+}
